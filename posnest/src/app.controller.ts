@@ -16,17 +16,18 @@ export class AppController {
 
   @Post()
   getPost() {
-    return "Desde @Post"
+    //this.ElServicio.metodo para no manejar directo el mensaje en el return
+    return this.appService.postHello()
   }
 
   //reto
-  @Put()
-  getPut() {
-    return "Desde @Put"
-  }
+  // @Put()
+  // getPut() {
+  //   return "Desde @Put"
+  // }
 
-  @Patch()
-  getPatch() {
-    return "Desde @Patch"
-  }
+  // @Patch()
+  // getPatch() {
+  //   return "Desde @Patch"
+  // }
 }
