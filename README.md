@@ -6,4 +6,6 @@ POS es uno de los múltiples proyectos desarrollados durante mi aprendizaje en l
 
 ## Cambios realizados:
 
-Autor: Byron Ovalle - 08/2025.
+* Se cambió la implementación de PostgreSQL por SQL Server, manteniendo la conexión con TypeORM.
+
+Autor: Byron Ovalle - 08/2025
