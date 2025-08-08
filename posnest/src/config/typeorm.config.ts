@@ -1,5 +1,6 @@
 import { ConfigService } from '@nestjs/config'
 import {  TypeOrmModuleOptions } from '@nestjs/typeorm'
+import { join } from 'path'
 
 export const typeOrmConfig = (configService : ConfigService) : TypeOrmModuleOptions   => ({
     type: 'mssql',
@@ -11,5 +12,7 @@ export const typeOrmConfig = (configService : ConfigService) : TypeOrmModuleOpti
     options: {
         trustServerCertificate: true,
     },
-    logging: true
+    logging: true,
+    entities: [join(__dirname + '../../**/*.entity.{js,ts}')],
+    synchronize: true
 })
